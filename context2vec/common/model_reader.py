@@ -117,7 +117,7 @@ class ModelReader(object):
 
 
     def read_words(self, filename):
-        with open(filename, 'r') as f:
+        with open(filename, 'r', encoding="utf-8") as f:
             ss = f.readline().split()
             n_vocab, n_units = int(ss[0]), int(ss[1])
             word2index = {}
